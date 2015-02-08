@@ -38,6 +38,7 @@
 
 #import "PilotingViewController.h"
 #import "DeviceController.h"
+ #import <MyoKit/MyoKit.h>
 @import CoreMotion;
 
 @interface PilotingViewController () <DeviceControllerDelegate>
@@ -61,6 +62,16 @@
     
     _alertView = [[UIAlertView alloc] initWithTitle:[_service name] message:@"Connecting ..."
                                            delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    
+    
+    [[TLMHub sharedHub] setLockingPolicy:TLMLockingPolicyNone];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceivePoseChange:)
+                                                 name:TLMMyoDidReceivePoseChangedNotification
+                                               object:nil];
+
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -93,6 +104,34 @@
     
     [self measureAccelerometerData];
 }
+
+
+- (IBAction)connectToMyo:(id)sender {
+    
+    UINavigationController *settings = [TLMSettingsViewController settingsInNavigationController];
+    
+    [self presentViewController:settings animated:YES completion:nil];
+   
+    
+}
+
+
+
+
+- (void)didReceivePoseChange:(NSNotification*)notification {
+    
+    NSLog(@"YOU MOVED");
+    TLMPose *pose = notification.userInfo[kTLMKeyPose];
+    
+    if(pose.type == TLMPoseTypeDoubleTap)
+    {
+       [_deviceController sendPhoto];
+    }
+    
+    
+    
+}
+
 
 
 
@@ -164,7 +203,6 @@
     [_deviceController setGaz:-50];
 }
 - (IBAction)takePicture:(id)sender {
-    NSLog(@"IN THE ORIGINAL ACTION");
     [_deviceController sendPhoto];
     
 }
