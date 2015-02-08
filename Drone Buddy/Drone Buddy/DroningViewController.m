@@ -158,6 +158,22 @@
     
 }
 
+- (IBAction)emergencyClick:(id)sender
+{
+    [_deviceController sendEmergency];
+}
+
+- (IBAction)takeoffClick:(id)sender
+{
+    [_deviceController sendTakeoff];
+}
+
+- (IBAction)landingClick:(id)sender
+{
+    [_deviceController sendLanding];
+}
+
+
 
 
 
