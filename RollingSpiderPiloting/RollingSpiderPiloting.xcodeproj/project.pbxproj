@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D151CB71A7640AE00B00257 /* libARCommands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D151CB21A7640AE00B00257 /* libARCommands.framework */; };
-		1D151CB81A7640AE00B00257 /* libARDataTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D151CB31A7640AE00B00257 /* libARDataTransfer.framework */; };
-		1D151CB91A7640AE00B00257 /* libARNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D151CB41A7640AE00B00257 /* libARNetwork.framework */; };
-		1D151CBA1A7640AE00B00257 /* libARNetworkAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D151CB51A7640AE00B00257 /* libARNetworkAL.framework */; };
-		1D151CBB1A7640AE00B00257 /* libARSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D151CB61A7640AE00B00257 /* libARSAL.framework */; };
-		1D151CBD1A7643B600B00257 /* libARDiscovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D151CBC1A7643B600B00257 /* libARDiscovery.framework */; };
 		1D9DF23B1A6D580F000941ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DF23A1A6D580F000941ED /* main.m */; };
 		1D9DF23E1A6D580F000941ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DF23D1A6D580F000941ED /* AppDelegate.m */; };
 		1D9DF2411A6D580F000941ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DF2401A6D580F000941ED /* ViewController.m */; };
@@ -21,6 +15,19 @@
 		1D9DF2491A6D580F000941ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9DF2471A6D580F000941ED /* LaunchScreen.xib */; };
 		1D9DF2741A6E967F000941ED /* DeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DF2731A6E967F000941ED /* DeviceController.m */; };
 		1D9DF2791A6EB420000941ED /* PilotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DF2781A6EB420000941ED /* PilotingViewController.m */; };
+		86A166B71A875B4F00427213 /* libARCommands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166AA1A875B4F00427213 /* libARCommands.framework */; };
+		86A166B81A875B4F00427213 /* libARDataTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166AB1A875B4F00427213 /* libARDataTransfer.framework */; };
+		86A166B91A875B4F00427213 /* libARDiscovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166AC1A875B4F00427213 /* libARDiscovery.framework */; };
+		86A166BA1A875B4F00427213 /* libARMavlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166AD1A875B4F00427213 /* libARMavlink.framework */; };
+		86A166BB1A875B4F00427213 /* libARMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166AE1A875B4F00427213 /* libARMedia.framework */; };
+		86A166BC1A875B4F00427213 /* libARNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166AF1A875B4F00427213 /* libARNetwork.framework */; };
+		86A166BD1A875B4F00427213 /* libARNetworkAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B01A875B4F00427213 /* libARNetworkAL.framework */; };
+		86A166BE1A875B4F00427213 /* libARSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B11A875B4F00427213 /* libARSAL.framework */; };
+		86A166BF1A875B4F00427213 /* libARStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B21A875B4F00427213 /* libARStream.framework */; };
+		86A166C01A875B4F00427213 /* libARUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B31A875B4F00427213 /* libARUpdater.framework */; };
+		86A166C11A875B4F00427213 /* libARUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B41A875B4F00427213 /* libARUtils.framework */; };
+		86A166C21A875B4F00427213 /* libcurl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B51A875B4F00427213 /* libcurl.framework */; };
+		86A166C31A875B4F00427213 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166B61A875B4F00427213 /* libjson.framework */; };
 		BEB852EE1A87346B002C9FDF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB852ED1A87346B002C9FDF /* CoreMotion.framework */; };
 		BEB852F01A874EA5002C9FDF /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB852EF1A874EA5002C9FDF /* MyoKit.framework */; };
 		BEB852F21A874EAE002C9FDF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB852F11A874EAE002C9FDF /* CoreBluetooth.framework */; };
@@ -28,12 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D151CB21A7640AE00B00257 /* libARCommands.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libARCommands.framework; path = ../../../../ARSDKBuildUtils/Targets/iOS/Install/Frameworks/libARCommands.framework; sourceTree = "<group>"; };
-		1D151CB31A7640AE00B00257 /* libARDataTransfer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libARDataTransfer.framework; path = ../../../../ARSDKBuildUtils/Targets/iOS/Install/Frameworks/libARDataTransfer.framework; sourceTree = "<group>"; };
-		1D151CB41A7640AE00B00257 /* libARNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libARNetwork.framework; path = ../../../../ARSDKBuildUtils/Targets/iOS/Install/Frameworks/libARNetwork.framework; sourceTree = "<group>"; };
-		1D151CB51A7640AE00B00257 /* libARNetworkAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libARNetworkAL.framework; path = ../../../../ARSDKBuildUtils/Targets/iOS/Install/Frameworks/libARNetworkAL.framework; sourceTree = "<group>"; };
-		1D151CB61A7640AE00B00257 /* libARSAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libARSAL.framework; path = ../../../../ARSDKBuildUtils/Targets/iOS/Install/Frameworks/libARSAL.framework; sourceTree = "<group>"; };
-		1D151CBC1A7643B600B00257 /* libARDiscovery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libARDiscovery.framework; path = ../../../../ARSDKBuildUtils/Targets/iOS/Install/Frameworks/libARDiscovery.framework; sourceTree = "<group>"; };
 		1D9DF2351A6D580F000941ED /* RollingSpiderPiloting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingSpiderPiloting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9DF2391A6D580F000941ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D9DF23A1A6D580F000941ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +49,19 @@
 		1D9DF2731A6E967F000941ED /* DeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceController.m; sourceTree = "<group>"; };
 		1D9DF2771A6EB420000941ED /* PilotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilotingViewController.h; sourceTree = "<group>"; };
 		1D9DF2781A6EB420000941ED /* PilotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilotingViewController.m; sourceTree = "<group>"; };
+		86A166AA1A875B4F00427213 /* libARCommands.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARCommands.framework; sourceTree = "<group>"; };
+		86A166AB1A875B4F00427213 /* libARDataTransfer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARDataTransfer.framework; sourceTree = "<group>"; };
+		86A166AC1A875B4F00427213 /* libARDiscovery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARDiscovery.framework; sourceTree = "<group>"; };
+		86A166AD1A875B4F00427213 /* libARMavlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARMavlink.framework; sourceTree = "<group>"; };
+		86A166AE1A875B4F00427213 /* libARMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARMedia.framework; sourceTree = "<group>"; };
+		86A166AF1A875B4F00427213 /* libARNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARNetwork.framework; sourceTree = "<group>"; };
+		86A166B01A875B4F00427213 /* libARNetworkAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARNetworkAL.framework; sourceTree = "<group>"; };
+		86A166B11A875B4F00427213 /* libARSAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARSAL.framework; sourceTree = "<group>"; };
+		86A166B21A875B4F00427213 /* libARStream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARStream.framework; sourceTree = "<group>"; };
+		86A166B31A875B4F00427213 /* libARUpdater.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARUpdater.framework; sourceTree = "<group>"; };
+		86A166B41A875B4F00427213 /* libARUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARUtils.framework; sourceTree = "<group>"; };
+		86A166B51A875B4F00427213 /* libcurl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libcurl.framework; sourceTree = "<group>"; };
+		86A166B61A875B4F00427213 /* libjson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libjson.framework; sourceTree = "<group>"; };
 		BEB852ED1A87346B002C9FDF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BEB852EF1A874EA5002C9FDF /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
 		BEB852F11A874EAE002C9FDF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -59,16 +73,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A166C21A875B4F00427213 /* libcurl.framework in Frameworks */,
+				86A166B81A875B4F00427213 /* libARDataTransfer.framework in Frameworks */,
+				86A166BD1A875B4F00427213 /* libARNetworkAL.framework in Frameworks */,
 				BEB852F41A874EB5002C9FDF /* SystemConfiguration.framework in Frameworks */,
+				86A166BA1A875B4F00427213 /* libARMavlink.framework in Frameworks */,
 				BEB852F21A874EAE002C9FDF /* CoreBluetooth.framework in Frameworks */,
+				86A166BF1A875B4F00427213 /* libARStream.framework in Frameworks */,
 				BEB852EE1A87346B002C9FDF /* CoreMotion.framework in Frameworks */,
+				86A166B91A875B4F00427213 /* libARDiscovery.framework in Frameworks */,
+				86A166BC1A875B4F00427213 /* libARNetwork.framework in Frameworks */,
+				86A166BE1A875B4F00427213 /* libARSAL.framework in Frameworks */,
 				BEB852F01A874EA5002C9FDF /* MyoKit.framework in Frameworks */,
-				1D151CBB1A7640AE00B00257 /* libARSAL.framework in Frameworks */,
-				1D151CBA1A7640AE00B00257 /* libARNetworkAL.framework in Frameworks */,
-				1D151CB71A7640AE00B00257 /* libARCommands.framework in Frameworks */,
-				1D151CB91A7640AE00B00257 /* libARNetwork.framework in Frameworks */,
-				1D151CBD1A7643B600B00257 /* libARDiscovery.framework in Frameworks */,
-				1D151CB81A7640AE00B00257 /* libARDataTransfer.framework in Frameworks */,
+				86A166C11A875B4F00427213 /* libARUtils.framework in Frameworks */,
+				86A166C31A875B4F00427213 /* libjson.framework in Frameworks */,
+				86A166C01A875B4F00427213 /* libARUpdater.framework in Frameworks */,
+				86A166B71A875B4F00427213 /* libARCommands.framework in Frameworks */,
+				86A166BB1A875B4F00427213 /* libARMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,16 +144,23 @@
 		1D9DF26B1A6D62CB000941ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86A166AA1A875B4F00427213 /* libARCommands.framework */,
+				86A166AB1A875B4F00427213 /* libARDataTransfer.framework */,
+				86A166AC1A875B4F00427213 /* libARDiscovery.framework */,
+				86A166AD1A875B4F00427213 /* libARMavlink.framework */,
+				86A166AE1A875B4F00427213 /* libARMedia.framework */,
+				86A166AF1A875B4F00427213 /* libARNetwork.framework */,
+				86A166B01A875B4F00427213 /* libARNetworkAL.framework */,
+				86A166B11A875B4F00427213 /* libARSAL.framework */,
+				86A166B21A875B4F00427213 /* libARStream.framework */,
+				86A166B31A875B4F00427213 /* libARUpdater.framework */,
+				86A166B41A875B4F00427213 /* libARUtils.framework */,
+				86A166B51A875B4F00427213 /* libcurl.framework */,
+				86A166B61A875B4F00427213 /* libjson.framework */,
 				BEB852F31A874EB5002C9FDF /* SystemConfiguration.framework */,
 				BEB852F11A874EAE002C9FDF /* CoreBluetooth.framework */,
 				BEB852EF1A874EA5002C9FDF /* MyoKit.framework */,
 				BEB852ED1A87346B002C9FDF /* CoreMotion.framework */,
-				1D151CBC1A7643B600B00257 /* libARDiscovery.framework */,
-				1D151CB21A7640AE00B00257 /* libARCommands.framework */,
-				1D151CB31A7640AE00B00257 /* libARDataTransfer.framework */,
-				1D151CB41A7640AE00B00257 /* libARNetwork.framework */,
-				1D151CB51A7640AE00B00257 /* libARNetworkAL.framework */,
-				1D151CB61A7640AE00B00257 /* libARSAL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
