@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RollingSpiderPiloting/PilotingViewController.m"
-            timestampString = "445068969.71775"
+            timestampString = "445082575.398288"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "-yawLeftTouchDown:"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "-emergencyClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

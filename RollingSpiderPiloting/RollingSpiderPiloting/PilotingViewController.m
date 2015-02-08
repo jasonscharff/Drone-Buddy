@@ -46,6 +46,10 @@
 @property (nonatomic, strong) UIAlertView *alertView;
 @property(strong, nonatomic) CMMotionManager *motion;
 @property BOOL individualJump;
+@property double MULTIPLIER;
+
+
+
 @end
 
 @implementation PilotingViewController
@@ -80,6 +84,7 @@
     [_alertView show];
     
      self.individualJump = true;
+    self.MULTIPLIER = 100 / 2 * M_PI;
     
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -102,7 +107,10 @@
         }
     });
     
+    self.motion = [[CMMotionManager alloc]init];
+    
     [self measureAccelerometerData];
+    [self measureGyroData];
 }
 
 
@@ -138,7 +146,6 @@
 -(void)measureAccelerometerData
 {
     float threshold = 0.6;
-    self.motion = [[CMMotionManager alloc]init];
     [self.motion startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
         if(accelerometerData.acceleration.z > threshold)
         {
@@ -153,6 +160,26 @@
             }
             
         }
+    }];
+}
+
+-(void) measureGyroData
+{
+    double threshold = 0.05;
+    [self.motion setDeviceMotionUpdateInterval:0.1];
+    [self.motion startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motionData, NSError *error) {
+        if(motionData.rotationRate.x > threshold || motionData.rotationRate.x < threshold * -1)
+        {
+            [_deviceController setFlag:1];
+            [_deviceController setYaw:motionData.rotationRate.x * self.MULTIPLIER];
+        }
+        else
+        {
+            [_deviceController setFlag:0];
+            [_deviceController setYaw:0];
+        }
+        
+        NSLog(@"%f", motionData.rotationRate.x);
     }];
 }
 

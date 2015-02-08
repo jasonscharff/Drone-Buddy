@@ -40,6 +40,9 @@
 #import <libARDiscovery/ARDISCOVERY_BonjourDiscovery.h>
 
 @interface PilotingViewController : UIViewController
+{
+
+}
 
 @property (nonatomic, strong) ARService* service;
 
