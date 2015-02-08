@@ -40,6 +40,10 @@
                                                object:nil];
     self.myTextView.text = @"SAMPLE TEXT";
     
+    
+    
+    
+    
 }
 
 
@@ -67,6 +71,11 @@
     });
     
     self.locationManager = [[CLLocationManager alloc]init];
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
+    {
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLocation) userInfo:nil repeats:YES];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
@@ -92,7 +101,9 @@
 
 -(void)updateDroneToSpeed : (double)speedMS
 {
-    float MS_KMH_Ratio = 3.6;
+    //float MS_KMH_Ratio = 3.6;
+    float MS_KMH_Ratio = 5.0;
+    
     float maxSpeedDrone = 18;
     
     
