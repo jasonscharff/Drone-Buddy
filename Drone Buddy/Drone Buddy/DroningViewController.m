@@ -41,7 +41,7 @@
     self.myTextView.text = @"SAMPLE TEXT";
     
     self.individualJump = true;
-    self.MULTIPLIER = 100 / 2 * M_PI;
+    self.MULTIPLIER = 100 / 2 * M_PI / 2;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _deviceController = [[DeviceController alloc]initWithARService:_service];
@@ -102,7 +102,7 @@
 -(void)updateDroneToSpeed : (double)speedMS
 {
     //float MS_KMH_Ratio = 3.6;
-    float MS_KMH_Ratio = 5.0;
+    float MS_KMH_Ratio = 15.0;
     
     float maxSpeedDrone = 18;
     
