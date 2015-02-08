@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		869674D11A87130800FAE8EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 869674D01A87130800FAE8EA /* main.m */; };
+		869674D41A87130800FAE8EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 869674D31A87130800FAE8EA /* AppDelegate.m */; };
+		869674D71A87130800FAE8EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869674D61A87130800FAE8EA /* ViewController.m */; };
+		869674DA1A87130800FAE8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869674D81A87130800FAE8EA /* Main.storyboard */; };
+		869674DC1A87130800FAE8EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869674DB1A87130800FAE8EA /* Images.xcassets */; };
+		869674DF1A87130800FAE8EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869674DD1A87130800FAE8EA /* LaunchScreen.xib */; };
+		869674EB1A87130800FAE8EA /* Drone_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 869674EA1A87130800FAE8EA /* Drone_BuddyTests.m */; };
+		8696750F1A8714C000FAE8EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696750E1A8714C000FAE8EA /* Foundation.framework */; };
+		869675111A8714C400FAE8EA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675101A8714C400FAE8EA /* CoreBluetooth.framework */; };
+		8696751A1A87299300FAE8EA /* BTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 869675191A87299300FAE8EA /* BTManager.m */; };
+		8696751D1A872E5400FAE8EA /* DeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8696751C1A872E5400FAE8EA /* DeviceController.m */; };
+		869675451A87319200FAE8EA /* libARCommands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675381A87319200FAE8EA /* libARCommands.framework */; };
+		869675461A87319200FAE8EA /* libARDataTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675391A87319200FAE8EA /* libARDataTransfer.framework */; };
+		869675471A87319200FAE8EA /* libARDiscovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696753A1A87319200FAE8EA /* libARDiscovery.framework */; };
+		869675481A87319200FAE8EA /* libARMavlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696753B1A87319200FAE8EA /* libARMavlink.framework */; };
+		869675491A87319200FAE8EA /* libARMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696753C1A87319200FAE8EA /* libARMedia.framework */; };
+		8696754A1A87319200FAE8EA /* libARNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696753D1A87319200FAE8EA /* libARNetwork.framework */; };
+		8696754B1A87319200FAE8EA /* libARNetworkAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696753E1A87319200FAE8EA /* libARNetworkAL.framework */; };
+		8696754C1A87319200FAE8EA /* libARSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696753F1A87319200FAE8EA /* libARSAL.framework */; };
+		8696754D1A87319200FAE8EA /* libARStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675401A87319200FAE8EA /* libARStream.framework */; };
+		8696754E1A87319200FAE8EA /* libARUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675411A87319200FAE8EA /* libARUpdater.framework */; };
+		8696754F1A87319200FAE8EA /* libARUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675421A87319200FAE8EA /* libARUtils.framework */; };
+		869675501A87319200FAE8EA /* libcurl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675431A87319200FAE8EA /* libcurl.framework */; };
+		869675511A87319200FAE8EA /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869675441A87319200FAE8EA /* libjson.framework */; };
+		869675551A8733D200FAE8EA /* DroningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869675541A8733D200FAE8EA /* DroningViewController.m */; };
+		86A166A51A875AB800427213 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166A41A875AB800427213 /* CoreMotion.framework */; };
+		86A166A71A875B0900427213 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166A61A875B0900427213 /* MyoKit.framework */; };
+		86A166A91A875B1A00427213 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A166A81A875B1A00427213 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		869674E51A87130800FAE8EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869674C31A87130800FAE8EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869674CA1A87130800FAE8EA;
+			remoteInfo = "Drone Buddy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		869674CB1A87130800FAE8EA /* Drone Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drone Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		869674CF1A87130800FAE8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869674D01A87130800FAE8EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		869674D21A87130800FAE8EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		869674D31A87130800FAE8EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		869674D51A87130800FAE8EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		869674D61A87130800FAE8EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		869674D91A87130800FAE8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		869674DB1A87130800FAE8EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		869674DE1A87130800FAE8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		869674E41A87130800FAE8EA /* Drone BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drone BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		869674E91A87130800FAE8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869674EA1A87130800FAE8EA /* Drone_BuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drone_BuddyTests.m; sourceTree = "<group>"; };
+		8696750E1A8714C000FAE8EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		869675101A8714C400FAE8EA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		869675181A87299300FAE8EA /* BTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTManager.h; sourceTree = "<group>"; };
+		869675191A87299300FAE8EA /* BTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTManager.m; sourceTree = "<group>"; };
+		8696751B1A872E5400FAE8EA /* DeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceController.h; sourceTree = "<group>"; };
+		8696751C1A872E5400FAE8EA /* DeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceController.m; sourceTree = "<group>"; };
+		869675381A87319200FAE8EA /* libARCommands.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARCommands.framework; sourceTree = "<group>"; };
+		869675391A87319200FAE8EA /* libARDataTransfer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARDataTransfer.framework; sourceTree = "<group>"; };
+		8696753A1A87319200FAE8EA /* libARDiscovery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARDiscovery.framework; sourceTree = "<group>"; };
+		8696753B1A87319200FAE8EA /* libARMavlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARMavlink.framework; sourceTree = "<group>"; };
+		8696753C1A87319200FAE8EA /* libARMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARMedia.framework; sourceTree = "<group>"; };
+		8696753D1A87319200FAE8EA /* libARNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARNetwork.framework; sourceTree = "<group>"; };
+		8696753E1A87319200FAE8EA /* libARNetworkAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARNetworkAL.framework; sourceTree = "<group>"; };
+		8696753F1A87319200FAE8EA /* libARSAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARSAL.framework; sourceTree = "<group>"; };
+		869675401A87319200FAE8EA /* libARStream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARStream.framework; sourceTree = "<group>"; };
+		869675411A87319200FAE8EA /* libARUpdater.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARUpdater.framework; sourceTree = "<group>"; };
+		869675421A87319200FAE8EA /* libARUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libARUtils.framework; sourceTree = "<group>"; };
+		869675431A87319200FAE8EA /* libcurl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libcurl.framework; sourceTree = "<group>"; };
+		869675441A87319200FAE8EA /* libjson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libjson.framework; sourceTree = "<group>"; };
+		869675531A8733D200FAE8EA /* DroningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DroningViewController.h; sourceTree = "<group>"; };
+		869675541A8733D200FAE8EA /* DroningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DroningViewController.m; sourceTree = "<group>"; };
+		86A166A41A875AB800427213 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		86A166A61A875B0900427213 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		86A166A81A875B1A00427213 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		869674C81A87130800FAE8EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A166A91A875B1A00427213 /* SystemConfiguration.framework in Frameworks */,
+				86A166A51A875AB800427213 /* CoreMotion.framework in Frameworks */,
+				8696754D1A87319200FAE8EA /* libARStream.framework in Frameworks */,
+				8696754F1A87319200FAE8EA /* libARUtils.framework in Frameworks */,
+				869675501A87319200FAE8EA /* libcurl.framework in Frameworks */,
+				869675461A87319200FAE8EA /* libARDataTransfer.framework in Frameworks */,
+				869675451A87319200FAE8EA /* libARCommands.framework in Frameworks */,
+				8696754C1A87319200FAE8EA /* libARSAL.framework in Frameworks */,
+				869675511A87319200FAE8EA /* libjson.framework in Frameworks */,
+				8696754B1A87319200FAE8EA /* libARNetworkAL.framework in Frameworks */,
+				8696754E1A87319200FAE8EA /* libARUpdater.framework in Frameworks */,
+				869675471A87319200FAE8EA /* libARDiscovery.framework in Frameworks */,
+				869675111A8714C400FAE8EA /* CoreBluetooth.framework in Frameworks */,
+				869675491A87319200FAE8EA /* libARMedia.framework in Frameworks */,
+				869675481A87319200FAE8EA /* libARMavlink.framework in Frameworks */,
+				8696754A1A87319200FAE8EA /* libARNetwork.framework in Frameworks */,
+				86A166A71A875B0900427213 /* MyoKit.framework in Frameworks */,
+				8696750F1A8714C000FAE8EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869674E11A87130800FAE8EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		869674C21A87130800FAE8EA = {
+			isa = PBXGroup;
+			children = (
+				869675521A87319700FAE8EA /* Frameworks */,
+				869674CD1A87130800FAE8EA /* Drone Buddy */,
+				869674E71A87130800FAE8EA /* Drone BuddyTests */,
+				869674CC1A87130800FAE8EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		869674CC1A87130800FAE8EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				869674CB1A87130800FAE8EA /* Drone Buddy.app */,
+				869674E41A87130800FAE8EA /* Drone BuddyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		869674CD1A87130800FAE8EA /* Drone Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				869674D21A87130800FAE8EA /* AppDelegate.h */,
+				869674D31A87130800FAE8EA /* AppDelegate.m */,
+				869675181A87299300FAE8EA /* BTManager.h */,
+				869675191A87299300FAE8EA /* BTManager.m */,
+				869674D51A87130800FAE8EA /* ViewController.h */,
+				869674D61A87130800FAE8EA /* ViewController.m */,
+				869675531A8733D200FAE8EA /* DroningViewController.h */,
+				869675541A8733D200FAE8EA /* DroningViewController.m */,
+				8696751B1A872E5400FAE8EA /* DeviceController.h */,
+				8696751C1A872E5400FAE8EA /* DeviceController.m */,
+				869674D81A87130800FAE8EA /* Main.storyboard */,
+				869674DB1A87130800FAE8EA /* Images.xcassets */,
+				869674DD1A87130800FAE8EA /* LaunchScreen.xib */,
+				869674CE1A87130800FAE8EA /* Supporting Files */,
+			);
+			path = "Drone Buddy";
+			sourceTree = "<group>";
+		};
+		869674CE1A87130800FAE8EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				869674CF1A87130800FAE8EA /* Info.plist */,
+				869674D01A87130800FAE8EA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		869674E71A87130800FAE8EA /* Drone BuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				869674EA1A87130800FAE8EA /* Drone_BuddyTests.m */,
+				869674E81A87130800FAE8EA /* Supporting Files */,
+			);
+			path = "Drone BuddyTests";
+			sourceTree = "<group>";
+		};
+		869674E81A87130800FAE8EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				869674E91A87130800FAE8EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		869675521A87319700FAE8EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86A166A81A875B1A00427213 /* SystemConfiguration.framework */,
+				86A166A61A875B0900427213 /* MyoKit.framework */,
+				86A166A41A875AB800427213 /* CoreMotion.framework */,
+				869675381A87319200FAE8EA /* libARCommands.framework */,
+				869675391A87319200FAE8EA /* libARDataTransfer.framework */,
+				8696753A1A87319200FAE8EA /* libARDiscovery.framework */,
+				8696753B1A87319200FAE8EA /* libARMavlink.framework */,
+				8696753C1A87319200FAE8EA /* libARMedia.framework */,
+				8696753D1A87319200FAE8EA /* libARNetwork.framework */,
+				8696753E1A87319200FAE8EA /* libARNetworkAL.framework */,
+				8696753F1A87319200FAE8EA /* libARSAL.framework */,
+				869675401A87319200FAE8EA /* libARStream.framework */,
+				869675411A87319200FAE8EA /* libARUpdater.framework */,
+				869675421A87319200FAE8EA /* libARUtils.framework */,
+				869675431A87319200FAE8EA /* libcurl.framework */,
+				869675441A87319200FAE8EA /* libjson.framework */,
+				869675101A8714C400FAE8EA /* CoreBluetooth.framework */,
+				8696750E1A8714C000FAE8EA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		869674CA1A87130800FAE8EA /* Drone Buddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869674EE1A87130800FAE8EA /* Build configuration list for PBXNativeTarget "Drone Buddy" */;
+			buildPhases = (
+				869674C71A87130800FAE8EA /* Sources */,
+				869674C81A87130800FAE8EA /* Frameworks */,
+				869674C91A87130800FAE8EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Drone Buddy";
+			productName = "Drone Buddy";
+			productReference = 869674CB1A87130800FAE8EA /* Drone Buddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		869674E31A87130800FAE8EA /* Drone BuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869674F11A87130800FAE8EA /* Build configuration list for PBXNativeTarget "Drone BuddyTests" */;
+			buildPhases = (
+				869674E01A87130800FAE8EA /* Sources */,
+				869674E11A87130800FAE8EA /* Frameworks */,
+				869674E21A87130800FAE8EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				869674E61A87130800FAE8EA /* PBXTargetDependency */,
+			);
+			name = "Drone BuddyTests";
+			productName = "Drone BuddyTests";
+			productReference = 869674E41A87130800FAE8EA /* Drone BuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		869674C31A87130800FAE8EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jose Bethancourt";
+				TargetAttributes = {
+					869674CA1A87130800FAE8EA = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					869674E31A87130800FAE8EA = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 869674CA1A87130800FAE8EA;
+					};
+				};
+			};
+			buildConfigurationList = 869674C61A87130800FAE8EA /* Build configuration list for PBXProject "Drone Buddy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 869674C21A87130800FAE8EA;
+			productRefGroup = 869674CC1A87130800FAE8EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				869674CA1A87130800FAE8EA /* Drone Buddy */,
+				869674E31A87130800FAE8EA /* Drone BuddyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		869674C91A87130800FAE8EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869674DA1A87130800FAE8EA /* Main.storyboard in Resources */,
+				869674DF1A87130800FAE8EA /* LaunchScreen.xib in Resources */,
+				869674DC1A87130800FAE8EA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869674E21A87130800FAE8EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		869674C71A87130800FAE8EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869674D71A87130800FAE8EA /* ViewController.m in Sources */,
+				8696751D1A872E5400FAE8EA /* DeviceController.m in Sources */,
+				869675551A8733D200FAE8EA /* DroningViewController.m in Sources */,
+				869674D41A87130800FAE8EA /* AppDelegate.m in Sources */,
+				869674D11A87130800FAE8EA /* main.m in Sources */,
+				8696751A1A87299300FAE8EA /* BTManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869674E01A87130800FAE8EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869674EB1A87130800FAE8EA /* Drone_BuddyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		869674E61A87130800FAE8EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869674CA1A87130800FAE8EA /* Drone Buddy */;
+			targetProxy = 869674E51A87130800FAE8EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		869674D81A87130800FAE8EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869674D91A87130800FAE8EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		869674DD1A87130800FAE8EA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869674DE1A87130800FAE8EA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		869674EC1A87130800FAE8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		869674ED1A87130800FAE8EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		869674EF1A87130800FAE8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Drone Buddy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		869674F01A87130800FAE8EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Drone Buddy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		869674F21A87130800FAE8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Drone BuddyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drone Buddy.app/Drone Buddy";
+			};
+			name = Debug;
+		};
+		869674F31A87130800FAE8EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Drone BuddyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drone Buddy.app/Drone Buddy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		869674C61A87130800FAE8EA /* Build configuration list for PBXProject "Drone Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869674EC1A87130800FAE8EA /* Debug */,
+				869674ED1A87130800FAE8EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869674EE1A87130800FAE8EA /* Build configuration list for PBXNativeTarget "Drone Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869674EF1A87130800FAE8EA /* Debug */,
+				869674F01A87130800FAE8EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869674F11A87130800FAE8EA /* Build configuration list for PBXNativeTarget "Drone BuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869674F21A87130800FAE8EA /* Debug */,
+				869674F31A87130800FAE8EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 869674C31A87130800FAE8EA /* Project object */;
+}
