@@ -145,6 +145,11 @@
         [_deviceController sendPhoto];
     }
     
+    if(pose.type == TLMPoseTypeFingersSpread)
+    {
+        [_deviceController sendEmergency];
+    }
+    
     
     
 }
