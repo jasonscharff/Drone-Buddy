@@ -15,6 +15,7 @@
 @property (nonatomic, strong) DeviceController* deviceController;
 @property(strong, nonatomic) CMMotionManager *motion;
 @property BOOL individualJump;
+@property double MULTIPLIER;
 @end
 
 @implementation DroningViewController
@@ -56,6 +57,7 @@
         }
     });
     [self measureAccelerometerData];
+    [self measureGyroData];
 }
 
 - (IBAction)connectToMyo:(id)sender {
@@ -101,6 +103,25 @@
     }];
 }
 
+-(void) measureGyroData
+{
+    double threshold = 0.05;
+    [self.motion setDeviceMotionUpdateInterval:0.1];
+    [self.motion startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motionData, NSError *error) {
+        if(motionData.rotationRate.x > threshold || motionData.rotationRate.x < threshold * -1)
+        {
+            [_deviceController setFlag:1];
+            [_deviceController setYaw:motionData.rotationRate.x * self.MULTIPLIER];
+        }
+        else
+        {
+            [_deviceController setFlag:0];
+            [_deviceController setYaw:0];
+        }
+        
+        NSLog(@"%f", motionData.rotationRate.x);
+    }];
+}
 /*
 - (void) viewDidDisappear:(BOOL)animated
 {
