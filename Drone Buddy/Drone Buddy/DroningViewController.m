@@ -119,7 +119,6 @@
             [_deviceController setYaw:0];
         }
         
-        NSLog(@"%f", motionData.rotationRate.x);
     }];
 }
 /*

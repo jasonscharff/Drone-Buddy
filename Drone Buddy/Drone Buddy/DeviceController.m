@@ -185,6 +185,38 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
 }
 
 
+
+
+
+-(void)setCorrectAltitude
+{
+    
+    u_int8_t cmdBuffer[128];
+    int32_t cmdSize = 0;
+    eARCOMMANDS_GENERATOR_ERROR cmdError;
+    eARNETWORK_ERROR netError = ARNETWORK_ERROR;
+    // Send Posture command
+    cmdError = ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxAltitude(cmdBuffer, sizeof(cmdBuffer), &cmdSize, 0.1);
+    if (cmdError == ARCOMMANDS_GENERATOR_OK)
+    {
+        // The commands sent by event should be sent to an buffer acknowledged  ; here RS_NET_C2D_ACK
+        netError = ARNETWORK_Manager_SendData(_netManager, RS_NET_C2D_ACK, cmdBuffer, cmdSize, NULL, &(arnetworkCmdCallback), 1);
+    }
+    
+    if ((cmdError != ARCOMMANDS_GENERATOR_OK) || (netError != ARNETWORK_OK))
+    {
+        NSLog(@"An error has occured");
+    }
+    
+}
+
+
+
+
+
+
+
+
 - (BOOL)start
 {
     NSLog(@"start ...");
@@ -526,6 +558,9 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
         sentStatus = NO;
     }
     
+    
+    [self setCorrectAltitude];
+    
     return sentStatus;
 }
 
@@ -547,7 +582,12 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     
     if ((cmdError != ARCOMMANDS_GENERATOR_OK) || (netError != ARNETWORK_OK))
     {
+        NSLog(@"LANDING ERROR");
         sentStatus = NO;
+    }
+    else
+    {
+        NSLog(@"SHOULD HAVE LANDED");
     }
     
     return sentStatus;
