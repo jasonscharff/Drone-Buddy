@@ -48,6 +48,7 @@
     [super viewDidAppear:animated];
 
     self.individualJump = true;
+    self.MULTIPLIER = 100 / 2 * M_PI;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _deviceController = [[DeviceController alloc]initWithARService:_service];
@@ -68,7 +69,8 @@
     self.locationManager = [[CLLocationManager alloc]init];
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLocation) userInfo:nil repeats:YES];
     self.locationManager.delegate = self;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
     [self.locationManager startUpdatingLocation];
     
     
@@ -108,6 +110,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    
     NSLog(@"Accuracy: %f", newLocation.horizontalAccuracy);
     NSLog(@"LAT: %f", newLocation.coordinate.latitude);
     //Purposefully blank
@@ -168,7 +171,6 @@
         {
             [_deviceController setFlag:1];
             [_deviceController setYaw:motionData.rotationRate.x * self.MULTIPLIER];
-            NSLog(@"sweg");
         }
         else
         {
@@ -176,6 +178,7 @@
             [_deviceController setYaw:0];
         }
         
+        //NSLog(@"%f", motionData.rotationRate.x);
     }];
 }
 
