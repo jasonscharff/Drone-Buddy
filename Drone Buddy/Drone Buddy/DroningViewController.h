@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <libARDiscovery/ARDISCOVERY_BonjourDiscovery.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface DroningViewController : UIViewController
+@interface DroningViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) ARService* service;
 

@@ -9,6 +9,7 @@
 #import "DroningViewController.h"
 #import "DeviceController.h"
 #import <MyoKit/MyoKit.h>
+#import <CoreLocation/CoreLocation.h>
 @import CoreMotion;
 
 @interface DroningViewController () <DeviceControllerDelegate>
@@ -16,6 +17,11 @@
 @property(strong, nonatomic) CMMotionManager *motion;
 @property BOOL individualJump;
 @property double MULTIPLIER;
+
+@property(strong, nonatomic) CLLocationManager *locationManager;
+@property(strong, nonatomic) NSTimer *locTimer;
+
+
 @end
 
 @implementation DroningViewController
@@ -57,9 +63,47 @@
             NSLog(@"something went wrong, kill me.");
         }
     });
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLocation) userInfo:nil repeats:YES];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    
+    
     [self measureAccelerometerData];
     [self measureGyroData];
 
+}
+
+- (void) updateLocation {
+    double speed = [self.locationManager location].speed;
+    NSLog(@"Current Speed in M/S: %f", speed);
+   // [self updateDroneToSpeed:speed];
+}
+
+
+-(void)updateDroneToSpeed : (double)speedMS
+{
+    float MS_KMH_Ratio = 3.6;
+    float maxSpeedDrone = 18;
+    
+    
+    double speedKMH = speedMS * MS_KMH_Ratio;
+    double speedPercent = (speedKMH / maxSpeedDrone);
+    if(speedPercent > 100)
+    {
+        speedPercent = 100;
+    }
+    [_deviceController setPitch:speedPercent];
+    
+    
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    //Purposefully blank
 }
 
 - (IBAction)connectToMyo:(id)sender {
@@ -89,6 +133,8 @@
     float threshold = 0.6;
     self.motion = [[CMMotionManager alloc]init];
     [self.motion startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+        
+        
         if(accelerometerData.acceleration.z > threshold)
         {
             if(self.individualJump == true)
@@ -110,6 +156,7 @@
     double threshold = 0.05;
     [self.motion setDeviceMotionUpdateInterval:0.1];
     [self.motion startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motionData, NSError *error) {
+        
         if(motionData.rotationRate.x > threshold || motionData.rotationRate.x < threshold * -1)
         {
             [_deviceController setFlag:1];
@@ -124,6 +171,12 @@
         
     }];
 }
+
+
+
+
+
+
 /*
 - (void) viewDidDisappear:(BOOL)animated
 {
