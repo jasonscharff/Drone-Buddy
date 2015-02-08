@@ -226,7 +226,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     eARNETWORK_ERROR netError = ARNETWORK_ERROR;
     // Send Posture command
     cmdError = ARCOMMANDS_Generator_GenerateMiniDronePilotingAutoTakeOffMode(cmdBuffer, sizeof(cmdBuffer), &cmdSize, (uint8_t)1);
-    NSLog(@"CMD: %u", cmdError);
+    //NSLog(@"CMD: %u", cmdError);
     if (cmdError == ARCOMMANDS_GENERATOR_OK)
     {
         // The commands sent by event should be sent to an buffer acknowledged  ; here RS_NET_C2D_ACK
@@ -316,10 +316,10 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     
     if (!failed){
         //[self setCorrectAltitude];
-        [self setAutoTakeOff];
+     //   [self setAutoTakeOff];
     }
 
-    
+     
     return failed;
 }
 
@@ -594,6 +594,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     
     if ((cmdError != ARCOMMANDS_GENERATOR_OK) || (netError != ARNETWORK_OK))
     {
+        NSLog(@"Takeoff error");
         sentStatus = NO;
     }
     
@@ -649,6 +650,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     
     if ((cmdError != ARCOMMANDS_GENERATOR_OK) || (netError != ARNETWORK_OK))
     {
+        NSLog(@"Emergency CMD error");
         sentStatus = NO;
     }
     
@@ -794,8 +796,8 @@ void batteryStateChangedCallback (uint8_t percent, void *custom)
     // callback of changing of battery level
     DeviceController *deviceController = (__bridge DeviceController*)custom;
     
-    NSLog(@"batteryStateChangedCallback ... %d  ; %@ : %@", percent, deviceController, [deviceController delegate]);
-    
+   //NSLog(@"batteryStateChangedCallback ... %d  ; %@ : %@", percent, deviceController, [deviceController delegate]);
+    NSLog(@"Battery poop: %d", percent);
     if ((deviceController != nil) && (deviceController.delegate != nil))
     {
         [deviceController.delegate onUpdateBattery:deviceController batteryLevel:percent];

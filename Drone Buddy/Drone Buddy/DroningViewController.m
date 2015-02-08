@@ -40,17 +40,6 @@
                                                object:nil];
     self.myTextView.text = @"SAMPLE TEXT";
     
-    
-    
-    
-    
-}
-
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-
     self.individualJump = true;
     self.MULTIPLIER = 100 / 2 * M_PI;
     
@@ -62,7 +51,7 @@
         NSLog(@"connectError = %d", connectError);
         
         
-
+        
         
         if (connectError)
         {
@@ -85,6 +74,17 @@
     
     [self measureAccelerometerData];
     [self measureGyroData];
+    
+    
+    
+}
+
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    
 
 }
 
@@ -122,8 +122,8 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     
-    NSLog(@"Accuracy: %f", newLocation.horizontalAccuracy);
-    NSLog(@"LAT: %f", newLocation.coordinate.latitude);
+    //NSLog(@"Accuracy: %f", newLocation.horizontalAccuracy);
+    //NSLog(@"LAT: %f", newLocation.coordinate.latitude);
     //Purposefully blank
 }
 
@@ -142,15 +142,20 @@
     
     if(pose.type == TLMPoseTypeDoubleTap)
     {
-        [_deviceController sendPhoto];
+        [_deviceController sendTakeoff];
     }
     
     if(pose.type == TLMPoseTypeFingersSpread)
     {
+        NSLog(@"JOSEB>ME");
         [_deviceController sendEmergency];
     }
+    if(pose.type == TLMPoseTypeFist)
+    {
+        [_deviceController sendLanding];
+    }
     
-    
+  
     
 }
 

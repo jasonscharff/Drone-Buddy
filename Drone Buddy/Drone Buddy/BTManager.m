@@ -35,15 +35,15 @@ int i=0;
     if ([peripheral.name isEqualToString:@"RS_W185666"]) {
         
         int RSSIabs = abs(RSSI.intValue);
-        NSLog(@"Curent: %d", RSSIabs);
+        //NSLog(@"Curent: %d", RSSIabs);
         
         
         if (pastRSSI == 0){
             pastRSSI = RSSIabs;
-            NSLog(@"HERE");
+            //NSLog(@"HERE");
         }else{
             int delta = (RSSIabs - pastRSSI);
-            NSLog(@"D: %d", delta);
+            //NSLog(@"D: %d", delta);
             pastRSSI = RSSIabs;
         }
 
