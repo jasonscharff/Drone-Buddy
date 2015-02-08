@@ -38,6 +38,7 @@
                                              selector:@selector(didReceivePoseChange:)
                                                  name:TLMMyoDidReceivePoseChangedNotification
                                                object:nil];
+    self.myTextView.text = @"SAMPLE TEXT";
     
 }
 
@@ -78,7 +79,11 @@
 
 - (void) updateLocation {
     double speed = [self.locationManager location].speed;
-    NSLog(@"Current Speed in M/S: %f", speed);
+//    NSLog(@"Current Speed in M/S: %f", speed);
+  //  NSLog(@"Accuracy: %f", [self.locationManager location].horizontalAccuracy);
+    self.myTextView.text = [self.myTextView.text stringByAppendingString:[NSString stringWithFormat:@"Current Speed in M/S: %f", speed]];
+    
+     self.myTextView.text = [self.myTextView.text stringByAppendingString:[NSString stringWithFormat:@"Accuracy %f", [self.locationManager location].horizontalAccuracy]];
    // [self updateDroneToSpeed:speed];
 }
 
@@ -103,6 +108,8 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    NSLog(@"Accuracy: %f", newLocation.horizontalAccuracy);
+    NSLog(@"LAT: %f", newLocation.coordinate.latitude);
     //Purposefully blank
 }
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Drone Buddy/DroningViewController.m"
-            timestampString = "445096888.519455"
+            timestampString = "445106359.034109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-updateLocation"
             landmarkType = "5">
          </BreakpointContent>

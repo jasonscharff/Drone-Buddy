@@ -18,5 +18,6 @@
 - (IBAction)takeoffClick:(id)sender;
 - (IBAction)landingClick:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITextView *myTextView;
 
 @end
