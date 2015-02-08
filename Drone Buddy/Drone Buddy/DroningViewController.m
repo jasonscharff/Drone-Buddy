@@ -95,7 +95,7 @@
     self.myTextView.text = [self.myTextView.text stringByAppendingString:[NSString stringWithFormat:@"Current Speed in M/S: %f", speed]];
     
      self.myTextView.text = [self.myTextView.text stringByAppendingString:[NSString stringWithFormat:@"Accuracy %f", [self.locationManager location].horizontalAccuracy]];
-   // [self updateDroneToSpeed:speed];
+    [self updateDroneToSpeed:speed];
 }
 
 
@@ -128,6 +128,12 @@
 }
 
 - (IBAction)connectToMyo:(id)sender {
+    
+    self.takeOffButton.hidden = YES;
+    self.emergencyButton.hidden = YES;
+    self.landButton.hidden = YES;
+    self.downButton.hidden = YES;
+    self.upButton.hidden = YES;
     
     UINavigationController *settings = [TLMSettingsViewController settingsInNavigationController];
     

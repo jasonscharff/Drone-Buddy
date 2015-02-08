@@ -316,7 +316,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     
     if (!failed){
         //[self setCorrectAltitude];
-     //   [self setAutoTakeOff];
+        [self setAutoTakeOff];
     }
 
      

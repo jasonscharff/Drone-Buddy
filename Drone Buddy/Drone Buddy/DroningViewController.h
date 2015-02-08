@@ -19,5 +19,10 @@
 - (IBAction)landingClick:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UITextView *myTextView;
+@property (strong, nonatomic) IBOutlet UIButton *emergencyButton;
+@property (strong, nonatomic) IBOutlet UIButton *takeOffButton;
+@property (strong, nonatomic) IBOutlet UIButton *landButton;
+@property (strong, nonatomic) IBOutlet UIButton *upButton;
+@property (strong, nonatomic) IBOutlet UIButton *downButton;
 
 @end
