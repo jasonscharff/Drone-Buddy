@@ -49,6 +49,7 @@
         
         NSLog(@"connectError = %d", connectError);
         
+        
 
         
         if (connectError)
@@ -58,6 +59,7 @@
     });
     [self measureAccelerometerData];
     [self measureGyroData];
+
 }
 
 - (IBAction)connectToMyo:(id)sender {
@@ -112,6 +114,7 @@
         {
             [_deviceController setFlag:1];
             [_deviceController setYaw:motionData.rotationRate.x * self.MULTIPLIER];
+            NSLog(@"sweg");
         }
         else
         {

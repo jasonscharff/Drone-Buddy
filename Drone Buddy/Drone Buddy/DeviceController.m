@@ -173,7 +173,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
         _dataPCMD.yaw = 0;
         _dataPCMD.gaz = 0;
         _dataPCMD.psi = 0;
-        [self setAutoTakeOff];
+
         
     }
     
@@ -189,39 +189,44 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
 
 
 
-//-(void)setCorrectAltitude
-//{
-//    
-//    u_int8_t cmdBuffer[128];
-//    int32_t cmdSize = 0;
-//    eARCOMMANDS_GENERATOR_ERROR cmdError;
-//    eARNETWORK_ERROR netError = ARNETWORK_ERROR;
-//    // Send Posture command
-//    cmdError = ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxAltitude(cmdBuffer, sizeof(cmdBuffer), &cmdSize, 0.1);
-//    if (cmdError == ARCOMMANDS_GENERATOR_OK)
-//    {
-//        // The commands sent by event should be sent to an buffer acknowledged  ; here RS_NET_C2D_ACK
-//        netError = ARNETWORK_Manager_SendData(_netManager, RS_NET_C2D_ACK, cmdBuffer, cmdSize, NULL, &(arnetworkCmdCallback), 1);
-//    }
-//    
-//    if ((cmdError != ARCOMMANDS_GENERATOR_OK) || (netError != ARNETWORK_OK))
-//    {
-//        NSLog(@"An error has occured");
-//    }
-//    
-//}
+-(void)setCorrectAltitude
+{
+    NSLog(@"setting correct alt");
+    u_int8_t cmdBuffer[128];
+    int32_t cmdSize = 0;
+    eARCOMMANDS_GENERATOR_ERROR cmdError;
+    eARNETWORK_ERROR netError = ARNETWORK_ERROR;
+    // Send Posture command
+    cmdError = ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxAltitude(cmdBuffer, sizeof(cmdBuffer), &cmdSize, (float)1.5);
+    NSLog(@"%u", cmdError);
+    
+    if (cmdError == ARCOMMANDS_GENERATOR_OK)
+    {
+        // The commands sent by event should be sent to an buffer acknowledged  ; here RS_NET_C2D_ACK
+        netError = ARNETWORK_Manager_SendData(_netManager, RS_NET_C2D_ACK, cmdBuffer, cmdSize, NULL, &(arnetworkCmdCallback), 1);
+    }
+    
+    if ((cmdError != ARCOMMANDS_GENERATOR_OK) || (netError != ARNETWORK_OK))
+    {
+        NSLog(@"An error has occured");
+    }
+    NSLog(@"DONE WITH THE ALT");
+}
 
 
 
 -(void)setAutoTakeOff
 {
     
+    NSLog(@"Setting the auto take off");
+    
     u_int8_t cmdBuffer[128];
     int32_t cmdSize = 0;
     eARCOMMANDS_GENERATOR_ERROR cmdError;
     eARNETWORK_ERROR netError = ARNETWORK_ERROR;
     // Send Posture command
-    cmdError = ARCOMMANDS_Generator_GenerateMiniDronePilotingAutoTakeOffMode(cmdBuffer, sizeof(cmdBuffer), &cmdSize, 1);
+    cmdError = ARCOMMANDS_Generator_GenerateMiniDronePilotingAutoTakeOffMode(cmdBuffer, sizeof(cmdBuffer), &cmdSize, (uint8_t)1);
+    NSLog(@"CMD: %u", cmdError);
     if (cmdError == ARCOMMANDS_GENERATOR_OK)
     {
         // The commands sent by event should be sent to an buffer acknowledged  ; here RS_NET_C2D_ACK
@@ -232,6 +237,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     {
         NSLog(@"THE TERRIBLE ERROR HAS OCURRED");
     }
+    NSLog(@"auto has been set, sorta, maybe?");
     
 }
 
@@ -307,6 +313,12 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
             }
         }
     }
+    
+    if (!failed){
+        //[self setCorrectAltitude];
+        [self setAutoTakeOff];
+    }
+
     
     return failed;
 }
@@ -559,6 +571,7 @@ static const size_t NUM_OF_COMMANDS_BUFFER_IDS = sizeof(COMMAND_BUFFER_IDS) / si
     {
         sentStatus = NO;
     }
+
     
     return sentStatus;
 }
