@@ -174,7 +174,24 @@
 
 
 
+//GAZ
+- (IBAction)gazUpTouchDown:(id)sender
+{
+    [_deviceController setGaz:50];
+}
+- (IBAction)gazDownTouchDown:(id)sender
+{
+    [_deviceController setGaz:-50];
+}
 
+- (IBAction)gazUpTouchUp:(id)sender
+{
+    [_deviceController setGaz:0];
+}
+- (IBAction)gazDownTouchUp:(id)sender
+{
+    [_deviceController setGaz:0];
+}
 
 
 @end
